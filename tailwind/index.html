@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marco Antonio Maia | Portfólio (Tailwind)</title>
+  <meta name="description" content="Página pessoal de Marco Antonio Maia — Application Security, DevSecOps e desenvolvimento.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ["Outfit", "system-ui", "sans-serif"],
+            display: ["Libre Baskerville", "Georgia", "serif"],
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-page text-main antialiased">
+  <nav class="nav-bar fixed top-0 inset-x-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between gap-3">
+      <a href="#inicio" class="font-display text-lg font-bold text-main">Marco Antonio Maia</a>
+      <div class="flex items-center gap-2">
+        <button type="button" class="btn-theme" id="theme-toggle" aria-label="Alternar tema claro ou escuro" title="Alternar tema">
+          <svg id="icon-sun" class="hidden w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"/></svg>
+          <svg id="icon-moon" class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/></svg>
+        </button>
+        <button type="button" id="menu-toggle" class="lg:hidden btn-theme" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+        <ul class="hidden lg:flex items-center gap-5 text-sm font-medium text-muted-custom">
+          <li><a class="hover:text-accent transition-colors" href="#sobre">Sobre</a></li>
+          <li><a class="hover:text-accent transition-colors" href="#conhecimentos">Conhecimentos</a></li>
+          <li><a class="hover:text-accent transition-colors" href="#experiencia">Experiência</a></li>
+          <li><a class="hover:text-accent transition-colors" href="#formacao">Formação</a></li>
+          <li><a class="hover:text-accent transition-colors" href="#certificacoes">Certificações</a></li>
+          <li><a class="hover:text-accent transition-colors" href="#contato">Contato</a></li>
+          <li><a class="hover:text-accent transition-colors" href="../index.html">Versões</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:hidden">
+      <div id="mobile-menu" class="mobile-menu">
+        <ul class="flex flex-col gap-2 text-sm font-medium text-muted-custom">
+          <li><a class="block py-1.5 hover:text-accent" href="#sobre">Sobre</a></li>
+          <li><a class="block py-1.5 hover:text-accent" href="#conhecimentos">Conhecimentos</a></li>
+          <li><a class="block py-1.5 hover:text-accent" href="#experiencia">Experiência</a></li>
+          <li><a class="block py-1.5 hover:text-accent" href="#formacao">Formação</a></li>
+          <li><a class="block py-1.5 hover:text-accent" href="#certificacoes">Certificações</a></li>
+          <li><a class="block py-1.5 hover:text-accent" href="#contato">Contato</a></li>
+          <li><a class="block py-1.5 hover:text-accent" href="../index.html">Versões</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero-panel flex items-center" id="inicio">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-28 w-full">
+      <p class="uppercase tracking-[0.14em] text-xs font-semibold text-amber-200/90 mb-4">Application Security · DevSecOps</p>
+      <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-4">Marco Antonio Maia</h1>
+      <p class="text-lg text-stone-200 max-w-xl leading-relaxed">
+        Estudante de Sistemas de Informação na UFLA, com atuação em segurança de aplicações,
+        automação DevSecOps e desenvolvimento full stack.
+      </p>
+      <div class="flex flex-wrap gap-x-5 gap-y-2 mt-7 text-sm text-stone-300">
+        <span>Lavras, MG, Brasil</span>
+        <a class="underline decoration-white/30 hover:decoration-white" href="tel:">[telefone removido]</a>
+        <a class="underline decoration-white/30 hover:decoration-white" href="mailto:[e-mail removido]">[e-mail removido]</a>
+      </div>
+      <a href="#experiencia" class="inline-block mt-8 bg-amber-500 hover:bg-amber-400 text-stone-900 font-semibold px-5 py-2.5 rounded-lg transition-colors">
+        Ver experiência
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="py-20" id="sobre">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 fade-in">
+        <h2 class="font-display text-3xl font-bold mb-2">Sobre</h2>
+        <p class="text-muted-custom mb-10 max-w-xl">Perfil profissional e foco de atuação.</p>
+        <div class="grid lg:grid-cols-3 gap-8">
+          <div class="lg:col-span-2 space-y-4 text-muted-custom leading-relaxed">
+            <p>
+              Atuo na interseção entre desenvolvimento e segurança: validação contínua com base no
+              OWASP SAMM, orquestração de ferramentas SAST/SCA e esteiras CI/CD com hard gates.
+              Também tenho experiência em troubleshooting de sistemas em produção, QA e
+              desenvolvimento mobile/full stack com Dart, Flutter e PostgreSQL.
+            </p>
+            <p>
+              Idiomas: inglês intermediário (leitura e escrita técnicas), português nativo e espanhol básico.
+            </p>
+          </div>
+          <div class="skill-card">
+            <h3 class="text-accent font-semibold mb-3">Em destaque</h3>
+            <ul class="list-disc pl-5 text-muted-custom space-y-1.5 text-sm">
+              <li>AppSec / DevSecOps</li>
+              <li>GitLab CI/CD &amp; Hard Gates</li>
+              <li>Pentest em aplicações web</li>
+              <li>Dart / Flutter / PostgreSQL</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 section-surface bg-surface" id="conhecimentos">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <h2 class="font-display text-3xl font-bold mb-2 fade-in">Conhecimentos e ferramentas</h2>
+        <p class="text-muted-custom mb-10 max-w-xl fade-in">Áreas técnicas e processos com os quais trabalho no dia a dia.</p>
+        <div class="grid md:grid-cols-2 gap-4">
+          <div class="skill-card fade-in">
+            <h3 class="text-accent font-semibold mb-3">Segurança e DevSecOps</h3>
+            <ul class="list-disc pl-5 text-muted-custom space-y-1.5 text-sm">
+              <li>Shift-Left, OWASP SAMM</li>
+              <li>Semgrep (SAST), Trivy (SCA/SBOM), Gitleaks</li>
+              <li>OWASP ZAP, Burp Suite, Kali Linux</li>
+            </ul>
+          </div>
+          <div class="skill-card fade-in">
+            <h3 class="text-accent font-semibold mb-3">Diagnóstico e troubleshooting</h3>
+            <ul class="list-disc pl-5 text-muted-custom space-y-1.5 text-sm">
+              <li>Análise forense de logs</li>
+              <li>Inspeção de tráfego (Wireshark)</li>
+              <li>Bug fixes e Cisco Packet Tracer</li>
+            </ul>
+          </div>
+          <div class="skill-card fade-in">
+            <h3 class="text-accent font-semibold mb-3">Desenvolvimento e infraestrutura</h3>
+            <ul class="list-disc pl-5 text-muted-custom space-y-1.5 text-sm">
+              <li>GitLab CI/CD (pipelines e hard gates), Git</li>
+              <li>APIs REST, Dart/Flutter, Dart Frog, FlutterFlow</li>
+              <li>PostgreSQL</li>
+            </ul>
+          </div>
+          <div class="skill-card fade-in">
+            <h3 class="text-accent font-semibold mb-3">Processos</h3>
+            <ul class="list-disc pl-5 text-muted-custom space-y-1.5 text-sm">
+              <li>JIRA</li>
+              <li>Metodologias ágeis (Scrum/Kanban)</li>
+              <li>Processos de QA</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20" id="experiencia">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <h2 class="font-display text-3xl font-bold mb-2 fade-in">Experiência profissional</h2>
+        <p class="text-muted-custom mb-10 max-w-xl fade-in">Trajetória em segurança, suporte técnico e desenvolvimento.</p>
+
+        <article class="timeline-item fade-in">
+          <h3 class="text-xl font-semibold">Application Security (AppSec)</h3>
+          <p class="text-accent font-medium">GEDAI / UFLA (em parceria com o IMA)</p>
+          <p class="text-sm text-muted-custom mb-3">12/2025 – Atual</p>
+          <ul class="list-disc pl-5 text-muted-custom space-y-1.5 text-sm leading-relaxed">
+            <li>Arquitetura de segurança: validação contínua em sistemas estatais críticos com base no OWASP SAMM.</li>
+            <li>Cultura DevSecOps: framework multi-camadas (Shift-Left) para antecipar falhas no SDLC.</li>
+            <li>Orquestração de ferramentas: Semgrep, Trivy e Gitleaks de forma centralizada.</li>
+            <li>Automação CI/CD no GitLab com testes paralelos e hard gates via exit codes.</li>
+            <li>Pentest em aplicações web com Burp Suite, OWASP ZAP, Nmap e Kali Linux (SQLi, XSS, autenticação).</li>
+          </ul>
+        </article>
+
+        <article class="timeline-item fade-in">
+          <h3 class="text-xl font-semibold">Suporte ao Proprietário &amp; Supervisor de Atendimento</h3>
+          <p class="text-accent font-medium">Cicclo (Soluções para Lavanderias de Autoatendimento)</p>
+          <p class="text-sm text-muted-custom mb-3">06/2023 – 06/2026 (3 anos)</p>
+          <ul class="list-disc pl-5 text-muted-custom space-y-1.5 text-sm leading-relaxed">
+            <li>Troubleshooting multi-sistemas: falhas em produção envolvendo IoT, redes, pagamentos e sistemas internos.</li>
+            <li>Isolamento de incidentes críticos em ambientes dinâmicos e com documentação reduzida.</li>
+            <li>QA: supervisão de equipe e auditoria de qualidade, com melhorias estruturais no produto.</li>
+            <li>Interface técnica entre franqueados e engenharia com diagnósticos precisos.</li>
+          </ul>
+        </article>
+
+        <article class="timeline-item fade-in">
+          <h3 class="text-xl font-semibold">Desenvolvedor Mobile / Full Stack</h3>
+          <p class="text-accent font-medium">Universidade Federal de Lavras (UFLA)</p>
+          <p class="text-sm text-muted-custom mb-3">06/2023 – 12/2025</p>
+          <ul class="list-disc pl-5 text-muted-custom space-y-1.5 text-sm leading-relaxed">
+            <li>Engenharia de APIs com Dart Frog e PostgreSQL, com foco em performance e escalabilidade.</li>
+            <li>Desenvolvimento de fluxos e interfaces no ecossistema Dart e Flutter.</li>
+            <li>Remediação de bugs com inspeção ativa de código em homologação.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="py-20 section-surface bg-surface" id="formacao">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 fade-in">
+        <h2 class="font-display text-3xl font-bold mb-2">Formação acadêmica</h2>
+        <p class="text-muted-custom mb-8 max-w-xl">Graduação em andamento.</p>
+        <div class="edu-card max-w-md">
+          <h3 class="text-lg font-semibold mb-1">Bacharelado em Sistemas de Informação</h3>
+          <p class="text-accent font-medium mb-1">Universidade Federal de Lavras (UFLA)</p>
+          <p class="text-muted-custom text-sm">Previsão de conclusão: 2026/2</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20" id="certificacoes">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <h2 class="font-display text-3xl font-bold mb-2 fade-in">Publicações e certificações</h2>
+        <p class="text-muted-custom mb-10 max-w-xl fade-in">Produção acadêmica e formação complementar em segurança.</p>
+        <div class="grid md:grid-cols-3 gap-4">
+          <div class="cert-card fade-in">
+            <h3 class="font-semibold mb-2">Artigo científico (padrão SBSeg)</h3>
+            <p class="text-sm text-muted-custom leading-relaxed">
+              Integração contínua de segurança no ciclo de desenvolvimento de um software:
+              um framework multi-camadas aplicado a um sistema governamental.
+            </p>
+          </div>
+          <div class="cert-card fade-in">
+            <h3 class="font-semibold mb-2">Jr Penetration Tester</h3>
+            <p class="text-sm text-muted-custom">TryHackMe · Conclusão: 2026</p>
+          </div>
+          <div class="cert-card fade-in">
+            <h3 class="font-semibold mb-2">Foundations of Cybersecurity</h3>
+            <p class="text-sm text-muted-custom">Google · Conclusão: 2025</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 section-surface bg-surface" id="contato">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 fade-in">
+        <h2 class="font-display text-3xl font-bold mb-2">Contato</h2>
+        <p class="text-muted-custom mb-8 max-w-xl">Vamos conversar sobre segurança, DevSecOps ou desenvolvimento.</p>
+        <div class="bg-accent-soft border border-custom rounded-2xl p-6 sm:p-8 grid sm:grid-cols-3 gap-6">
+          <div>
+            <p class="font-semibold mb-1">E-mail</p>
+            <a class="text-accent hover:underline" href="mailto:[e-mail removido]">[e-mail removido]</a>
+          </div>
+          <div>
+            <p class="font-semibold mb-1">Telefone</p>
+            <a class="text-accent hover:underline" href="tel:">[telefone removido]</a>
+          </div>
+          <div>
+            <p class="font-semibold mb-1">Localização</p>
+            <p class="text-muted-custom">Lavras, MG, Brasil</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-custom py-6 text-sm text-muted-custom">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row justify-between gap-2">
+      <span>&copy; <span id="year"></span> Marco Antonio Maia</span>
+      <span>
+        Versão Tailwind ·
+        <a class="text-accent hover:underline" href="../bootstrap/index.html">Ver versão Bootstrap</a>
+      </span>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
