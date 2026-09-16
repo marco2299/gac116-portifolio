@@ -46,6 +46,9 @@ npx serve .
 ├── README.md
 └── LICENSE
 ```
+## Veja o funcionamento do site no github pages
+
+🔗 **Link:**  https://marco2299.github.io/gac116-portifolio
 
 ## Autor
 
