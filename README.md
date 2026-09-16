@@ -54,4 +54,4 @@ npx serve .
 
 **Marco Antonio Maia**  
 Lavras, MG · Bacharelado em Sistemas de Informação (UFLA)  
-Contato: [e-mail removido]
+LinkedIn: https://www.linkedin.com/in/marco-antonio-b092691b4/
